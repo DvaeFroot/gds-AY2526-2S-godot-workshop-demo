@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dwn6p6033x5jd"]
+
+[ext_resource type="Script" uid="uid://dwgml7grv3m7b" path="res://scripts/score_counter.gd" id="1_5bsqw"]
+[ext_resource type="Texture2D" uid="uid://c6f3f3f25feub" path="res://resources/sprites/0.png" id="1_pu2o3"]
+[ext_resource type="Texture2D" uid="uid://cuxunnwi3leyw" path="res://resources/sprites/1.png" id="2_5bsqw"]
+[ext_resource type="Texture2D" uid="uid://etnemnhjh1om" path="res://resources/sprites/2.png" id="3_wy1yo"]
+[ext_resource type="Texture2D" uid="uid://bseogsir8gl16" path="res://resources/sprites/3.png" id="4_xtos8"]
+[ext_resource type="Texture2D" uid="uid://ce7x5bf3v8ykg" path="res://resources/sprites/4.png" id="5_mn547"]
+[ext_resource type="Texture2D" uid="uid://dvglntvkmy302" path="res://resources/sprites/5.png" id="6_4acsy"]
+[ext_resource type="Texture2D" uid="uid://cg25fe2asp7s6" path="res://resources/sprites/6.png" id="7_mx7qx"]
+[ext_resource type="Texture2D" uid="uid://bbrmfu8a6fmy0" path="res://resources/sprites/7.png" id="8_oubr1"]
+[ext_resource type="Texture2D" uid="uid://pqrrybnyhnr" path="res://resources/sprites/8.png" id="9_127ib"]
+[ext_resource type="Texture2D" uid="uid://cykuhxdvppaf5" path="res://resources/sprites/9.png" id="10_i513y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rwxrs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pu2o3")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5bsqw")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wy1yo")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xtos8")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_mn547")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4acsy")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_mx7qx")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_oubr1")
+}],
+"loop": true,
+"name": &"7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_127ib")
+}],
+"loop": true,
+"name": &"8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_i513y")
+}],
+"loop": true,
+"name": &"9",
+"speed": 5.0
+}]
+
+[node name="ScoreCounter" type="Node2D" unique_id=982023419 groups=["score_counter"]]
+texture_filter = 1
+script = ExtResource("1_5bsqw")
+
+[node name="Ones" type="AnimatedSprite2D" parent="." unique_id=157494123]
+position = Vector2(26, 0)
+sprite_frames = SubResource("SpriteFrames_rwxrs")
+animation = &"9"
+
+[node name="Tens" type="AnimatedSprite2D" parent="." unique_id=439562940]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_rwxrs")
+animation = &"9"
+
+[node name="Hundreds" type="AnimatedSprite2D" parent="." unique_id=1908879997]
+position = Vector2(-27, 0)
+sprite_frames = SubResource("SpriteFrames_rwxrs")
+animation = &"9"

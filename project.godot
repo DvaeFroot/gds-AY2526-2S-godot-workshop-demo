@@ -11,8 +11,24 @@ config_version=5
 [application]
 
 config/name="gds-AY2526-2S-godot-workshop-demo"
+run/main_scene="uid://ffsnmrwow2hv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=270
+window/size/viewport_height=360
+window/stretch/mode="viewport"
+
+[global_group]
+
+score_counter=""
+game_manager=""
+
+[layer_names]
+
+2d_physics/layer_1="player"
 
 [physics]
 

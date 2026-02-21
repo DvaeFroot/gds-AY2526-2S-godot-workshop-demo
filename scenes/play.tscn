@@ -1,3 +1,55 @@
 [gd_scene format=3 uid="uid://fhn8q133bgy6"]
 
+[ext_resource type="PackedScene" uid="uid://e51syc4mlyvr" path="res://scenes/player.tscn" id="1_8r3iy"]
+[ext_resource type="Script" uid="uid://c0r8q8w36ydpt" path="res://scripts/play.gd" id="1_65v2a"]
+[ext_resource type="Texture2D" uid="uid://brrdu1jmyi366" path="res://resources/sprites/background-day.png" id="1_hsi3f"]
+[ext_resource type="PackedScene" uid="uid://5eevd5uu8bqi" path="res://scenes/pipe.tscn" id="2_bofkp"]
+[ext_resource type="PackedScene" uid="uid://dwn6p6033x5jd" path="res://scenes/score_counter.tscn" id="3_bq38n"]
+[ext_resource type="Texture2D" uid="uid://fojbd3vswyc4" path="res://resources/sprites/base.png" id="6_j27tm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j27tm"]
+size = Vector2(288, 20)
+
 [node name="Play" type="Node2D" unique_id=1079377510]
+script = ExtResource("1_65v2a")
+
+[node name="Background1" type="Sprite2D" parent="." unique_id=1110423220]
+texture_filter = 1
+position = Vector2(136, 156)
+texture = ExtResource("1_hsi3f")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=212114403]
+texture_filter = 1
+position = Vector2(424, 156)
+texture = ExtResource("1_hsi3f")
+
+[node name="Player" parent="." unique_id=760189663 instance=ExtResource("1_8r3iy")]
+position = Vector2(56, 172)
+
+[node name="Pipe" parent="." unique_id=1553621929 instance=ExtResource("2_bofkp")]
+position = Vector2(335, 184)
+
+[node name="Pipe2" parent="." unique_id=1430162214 instance=ExtResource("2_bofkp")]
+position = Vector2(514, 179)
+
+[node name="Ground" type="Sprite2D" parent="." unique_id=1726115322]
+texture_filter = 1
+position = Vector2(168, 366)
+texture = ExtResource("6_j27tm")
+
+[node name="Ground2" type="Sprite2D" parent="." unique_id=1000446746]
+texture_filter = 1
+position = Vector2(-168, 366)
+texture = ExtResource("6_j27tm")
+
+[node name="ScoreCounter" parent="." unique_id=982023419 instance=ExtResource("3_bq38n")]
+position = Vector2(132, 33)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1902307691]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=874616526]
+position = Vector2(135, 324)
+shape = SubResource("RectangleShape2D_j27tm")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

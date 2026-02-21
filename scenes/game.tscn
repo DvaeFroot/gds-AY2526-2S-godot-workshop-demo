@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dtjlglpq0erdu" path="res://scripts/game.gd" id="1_uwrxv"]
 
-[node name="Game" type="Node2D" unique_id=1444461314]
+[node name="Game" type="Node2D" unique_id=1444461314 groups=["game_manager"]]
+process_mode = 3
 script = ExtResource("1_uwrxv")
 
 [node name="CurrentScene" type="Node2D" parent="." unique_id=271966150]
+process_mode = 1
